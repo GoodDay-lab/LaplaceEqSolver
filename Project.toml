@@ -1,0 +1,4 @@
+name = "LaplaceEqSolver"
+uuid = "691d765c-af7a-43df-867a-0d6f72945fbd"
+authors = ["Pavel Vasilev <s02230082@gse.cs.msu.ru>"]
+version = "0.1.0"

@@ -1,0 +1,1 @@
+![Отчёт](docs/document.pdf)

@@ -87,13 +87,15 @@ function ComputeErrors1d(u_numerical, u_exact, x)
         u_exact_vals = u_exact
     end
 
+    n = length(x)
+
     abs_errors = abs.(u_numerical .- u_exact_vals)
 
     inf_norm = maximum(abs_errors)
-    l2_norm = sqrt(sum(abs_errors.^2))
+    l2_norm = sqrt(sum(abs_errors.^2) / (n + 1))
 
     u_norm_inf = maximum(abs.(u_exact_vals))
-    u_norm_l2 = sqrt(sum(u_exact_vals.^2))
+    u_norm_l2 = sqrt(sum(u_exact_vals.^2) / (n + 1))
 
     relative_inf = inf_norm / (u_norm_inf + eps())
     relative_l2 = l2_norm / (u_norm_l2 + eps())
